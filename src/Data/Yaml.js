@@ -11,5 +11,5 @@ exports.parseFromYamlImpl = function(left, right, string) {
 };
 
 exports.printToYaml = function(json) {
-  return yaml.safeDump(json, { noRefs: true, lineWidth: -1, noCompatMode: true });
+  return yaml.safeDump(json, { noRefs: true, lineWidth: -1, noCompatMode: true, sortKeys: true });
 };
