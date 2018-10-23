@@ -1,7 +1,5 @@
 module Data.Yaml (parseFromYaml, printToYaml) where
 
-import Prelude
-
 import Data.Argonaut.Core (Json)
 import Data.Either (Either(..))
 import Data.Function.Uncurried (Fn3, runFn3)
