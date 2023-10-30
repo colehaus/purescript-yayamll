@@ -1,15 +1,15 @@
 "use strict";
 
-var yaml = require('js-yaml');
+import {load, dump} from "js-yaml";
 
-exports.parseFromYamlImpl = function(left, right, string) {
+export function parseFromYamlImpl(left, right, string) {
   try {
-    return right(yaml.safeLoad(string));
+    return right(load(string));
   } catch (e) {
     return left(e.toString());
   }
 };
 
-exports.printToYaml = function(json) {
-  return yaml.safeDump(json, { noRefs: true, lineWidth: -1, noCompatMode: true, sortKeys: true });
+export function printToYaml(json) {
+  return dump(json, { noRefs: true, lineWidth: -1, noCompatMode: true, sortKeys: true });
 };

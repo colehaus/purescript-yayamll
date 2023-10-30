@@ -1,6 +1,6 @@
 {
   "name": "purescript-yayamll",
   "dependencies": {
-    "js-yaml": "^3.11.0"
+    "js-yaml": "^4.1.0"
   }
 }
